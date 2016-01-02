@@ -1,0 +1,48 @@
+/*Richard Cotran Assignment 10 CSS stylesheet*/
+
+body {
+    background: red;
+    color: white;
+    margin: 25px;
+    font-family: sans-serif;
+    font-size: 20px;
+    
+}
+
+
+header {
+text-align: center;
+}
+
+
+
+#about {
+float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+
+
+#banner {
+width: 100%;
+    margin-top: -10px;
+}
+
+#thatPokemon {position:relative; left:240px; top:-150px;}
+
+#rights {text-align:center; position:relative; left:200px; top:200px; color:black; font-size: 14px;}
+
+#ball1 {float:left;}
+
+#ball2 {float:right;}
+
+#ball3 {float:left;}
+
+#ball4 {float:right; position:relative; left:400px;}
+
+#spelling {float:left; position:relative; top:100px;}
+
+#theSpellings {float:left; position:relative; top:50px; left:5px; visibility:hidden;}
+
+#guessForm {text-align: center; position:relative; left:170px; top:10px; }
