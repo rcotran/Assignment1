@@ -1,4 +1,5 @@
 //Richard Cotran Assignment 10 Javascript file
+// I added this comment to look cool
 
 var num = 3;
 //The Pokemon's identification number for the script file
