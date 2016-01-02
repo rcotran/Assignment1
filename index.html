@@ -1,0 +1,76 @@
+<!--Richard Cotran Assignment 10 HTML file-->
+
+<!DOCTYPE html>
+
+<html>
+  
+<head>
+    
+<meta charset="ISO-8859-1">
+    
+<title>Who's That Pokémon?</title>
+    
+<link rel="stylesheet" href="poke.css" />
+<script src="poke.js"></script>
+</head>
+  
+<body>
+ 
+   
+<header>
+
+<a href="about/index.html" id="about">
+
+<img src="images/about.png"/>
+
+</a>
+
+<!--Creates the about button-->
+
+<img src="images/banner.png" id="banner"/>
+
+<!--Creates the banner-->
+</header>
+
+<content>
+<div id="ball1"> <img src="images/ball.png"/> </div>
+<div id="ball2"> <img src="images/ball.png"/> </div>
+
+<!--Makes two pokeballs-->
+
+<div id="spelling">
+<div onclick="showSpellings()">Need help spelling a Pokémon?</div>
+
+<!--The button to be clicked to display spellings-->
+
+
+<div id="theSpellings">Bulbasaur</br>Charmander</br>Squirtle</br>Pikachu</br>Butterfree</br>Gengar</br>Mewtwo</br>Jigglypuff</br>Mew</br>Onix</br>Zubat</br>Ponyta</br>Staryu</br>Magikarp</br>Eevee</br>Vaporeon</br>Flareon</br>Jolteon</br>Dragonite</br>Ditto
+</div>
+
+<!--Pokemon spellings-->
+
+<img id="thatPokemon" src="images/pikachu.png">
+
+<!--The Pokemon to be named by the user-->
+
+
+<form id="guessForm">
+Type in the name of the Pokémon in the picture above:</br>
+<input type="text" name="guess" id="guess">
+<input type="button" value="Submit" onclick="checkGuess()">
+</form>
+
+<!--The form to enter the Pokemon name. Calls the function to check the guess and set up the next guess-->
+
+
+<div id="ball3"> <img src="images/ball.png"/> </div>
+<div id="ball4"> <img src="images/ball.png"/> </div>
+
+<!--Two more pokeballs-->
+
+
+<p id="rights">I do not own any of the pictures or Pokémon shown on this website. All rights belong to their respective owners.</p>
+
+</content>
+</body>
+</html>
