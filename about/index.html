@@ -1,0 +1,47 @@
+<html>
+<body>
+
+<p>Richard Cotran<br>
+Assignment 10<br><br><br>
+
+
+Overview:<br><br>
+
+This web application is a game with inspiration drawn from the Pokemon franchise's "Who's that Pokemon?" segment of the Pokemon anime. A bit different from the original, this application is a game that displays a picture of a Pokemon and the user must name the Pokemon shown. The application will notify the user whether or not they are correct and will alert them of their current results after each guess. This is a simple game targetted at younger Pokemon fans. The intention was for this application to be for the iPhone or iPad.<br><br><br>
+
+
+Design:<br><br>
+
+It was not too difficult to find the Pokemon images necessary for the project. I decided for now to set up the page using only 20 of the original Pokemon. I did have to make my own banner which I did not have a decent illustrator for on my new laptop. The layout of the page is rather simple, with modest decorations and the main focus being on the large Pokemon picture in the middle. I also included a small section on the side to display the spellings of Pokemon if a user did not know the proper spelling. The program hides the spellings after each naming so the user can get used to spelling the Pokemon without looking.<br><br><br>
+
+
+Implementation:<br><br>
+
+This application uses very few different files, which are all be covered below.<br><br>
+
+index.html- The original HTML file<br>
+This file is the original HTML used to set up the page. It includes the header with a banner and the button linking here and div boxes for every image in the content except for the main Pokemon in the middle of the page. There is also a div box with the id "spelling" that displays the other spellings using HTML DOM. There is a form to enter the name of the Pokemon, and pressing submit (which deceivingly is a button type not a submit type) will invoke "checkGuess()" using HTML DOM in order to check whether the user is correct and set up the next Pokemon to be named.<br><br>
+
+poke.css- The CSS stylesheet<br>
+This file is simple enough to follow, though very tough to set up. A lot of relative positioning is used in order to move things to the proper spot, which could throw off the styling on different browsers, but is meant for use on an iPhone or iPad so it would not matter much if at all. The background, font and text colors are all also set up for the entire document at the top, and in only one place is that changed manually, for the disclaimer at the bottom. Otherwise the only other noteworthy item is that "#theSpellings" has its visibility set to hidden by default, in order to hide the Pokemon spellings initially if the user does not need to look at the list.<br><br>
+
+poke.js- The Javascript file<br>
+The javascript here is deceivingly simple and simply repetitive. Three variables are declared at the top, one is a number used to identify the Pokemon, one keeps track of the number of correct answers given by the user and the last one keeps track of the number of incorrect answers given by the user. There are two functions in this program's script, one called "checkGuess()" and one called "showSpellings()". The latter of the two is one simple line of code which simply sets the spellings of the Pokemon as visible if the user cannot spell the Pokemon, achieved by clicking on the appropriate div box as stated in the HTML section. "checkGuess()" is the main and largest function of the script. This function not only checks whether the user was correct in attempting to name the Pokemon, it also randomly chooses the next Pokemon for the user to name. First the function checks the answer using the current value of "num" and the value inserted by the user, placed inside the variable "theGuess". The function first uses an if statement to sort out the num, then checks to see whether theGuess is correct for the corresponding num. The user is then alerted whether or not they are correct and either the "correct" variable or the "incorrect" variable increases by one. Then the function generates a random number between 0 and 19, which the variable num is set to in order to identify the next Pokemon picture to be placed. Using HTML DOM the source of the image is changed depending on the new value of num. The user at the end is alerted of their current correct and incorrect answers and the spellings are set to hidden again so the user may learn the spellings of the Pokemon without looking.<br><br>
+
+images folder- Contains many .png files<br>
+This folder contains all the images used in my program.<br><br>
+
+about folder- Contains my project report<br>
+This is what is being read right now.<br><br><br>
+
+
+Analysis:<br><br>
+
+The number one thing that frustrated me about this program was the CSS, along with any other graphical designing issues. After much manipulating with CSS, attempting to float things to a certain side or to position them in one particular orientation I ended up settling for what I thought looked decent. With the graphics, no .svg files would work on any of my browsers, and the new computer means no sophisticated illustrator, not counting the ever sophisticated MS Paint, to work with, not that I am very familiar with using them. The banner was difficult to design as I didn't want a giant white background provided to me by Paint boxing the banner, so I did a poor job of filling in the red color. I decided to settle on the way it looks currently, but overall am fairly unhappy with the final outcome of how the program looks aesthetically.<br><br>
+
+That was probably the most difficult I experienced though. The HTML was fairly straightforward, although working in text edit meant a couple finicky errors threw me off for a while, and the Javascript was also fairly simple and simply repetitive. I did at first attempt to use an array to hold the names of all the Pokemon to check for the user playing and simply use the variable "num" to call the name from the array, but I could not figure out how to do so and still allow the program to maintain a lack of case sensitivity.<br><br>
+
+There is not too much I would change about the program as it stands. The HTML and Javascript are fairly solid, so I would mostly leave those alone. I would want to make a nicer banner with a proper illustrator first and foremost. Also, the current version includes only 20 of the original Pokemon. It would be easy but long and tedious to add the next 131 original Pokemon, but would make the game seem more complete overall. If I was feeling really adventerous I could even add the remaining 498 Pokemon (note: this number will officially increase this upcoming October) that are not from the original generation. Overall though, the program is not too far off from what I hoped it would be.</p>
+
+</body>
+</html>
